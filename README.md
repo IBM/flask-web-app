@@ -16,7 +16,7 @@
 
 # Create and deploy a Python Flask web application
 
-> We have similar applications available for [Go](https://github.com/IBM/go-web-app), [Java Liberty](https://github.com/IBM/java-liberty-web-app), [Swift](https://github.com/IBM/swift-web-app), [Spring](https://github.com/IBM/spring-web-app), and [Node](https://github.com/IBM/nodejs-web-app).
+> We have similar applications available for [Django](https://github.com/IBM/django-web-app), [Go](https://github.com/IBM/go-web-app), [Java Liberty](https://github.com/IBM/java-liberty-web-app), [Swift](https://github.com/IBM/swift-web-app), [Spring](https://github.com/IBM/spring-web-app), and [Node](https://github.com/IBM/nodejs-web-app).
 
 In this sample web application, you will create a Python web application using Flask. This application contains an opinionated set of files for web serving:
 
@@ -31,7 +31,7 @@ You can [deploy this application to IBM Cloud](https://cloud.ibm.com/developer/a
 ### Deploying to IBM Cloud
 
 <p align="center">
-    <a href="https://cloud.ibm.com/developer/appservice/create-app?navMode=starterkits">
+    <a href="https://cloud.ibm.com/developer/appservice/starter-kits/18601835-bd04-3039-8dc3-4a87d0d544a6/python-web-app-with-flask">
     <img src="https://cloud.ibm.com/devops/setup/deploy/button_x2.png" alt="Deploy to IBM Cloud">
     </a>
 </p>
