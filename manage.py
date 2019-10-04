@@ -121,13 +121,14 @@ parser.add_argument("ipaddress", nargs='?', default=DEFAULT_IP,
 
 
 def livereload_check():
-    check = subprocess.call("lsof -n -i4TCP:3000", shell=True)
+    check = subprocess.call("lsof -n -i4TCP:{}".format(CFG['network']["port"]), shell=True)
     if check == 0:
-        output = subprocess.check_output("pgrep Python", shell=True)
-        pypid = int(output)
-        os.kill(pypid, signal.SIGKILL)
-        log.debug("Discovered rogue Python process: {0}".format(pypid))
-        log.debug("Killing PID {0}...".format(pypid))
+        output = subprocess.check_output("ps -ef | egrep 'python manage.py|gunicorn' | egrep -v grep | awk '{print $3}'", shell=True).decode().strip()
+        for _pid in output.split("\n"):
+            pypid = int(_pid)
+            os.kill(pypid, signal.SIGKILL)
+            log.debug("Discovered rogue Python process: {0}".format(pypid))
+            log.debug("Killing PID {0}...".format(pypid))
     else:
         log.debug(" No rogue Python process running")
 
