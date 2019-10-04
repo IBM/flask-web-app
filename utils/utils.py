@@ -118,7 +118,7 @@ def remove_dir(directory):
 
 
 def secure_request(request):
-    #request.headers['Content-Security-Policy'] = "default-src 'self'"
+    # request.headers['Content-Security-Policy'] = "default-src 'self'"
     request.headers['Feature-Policy'] = "geolocation 'none'; microphone 'none'; camera 'none'"
     request.headers['Referrer-Policy'] = 'no-referrer'
     request.headers['Strict-Transport-Security'] = "max-age=31536000; includeSubDomains"

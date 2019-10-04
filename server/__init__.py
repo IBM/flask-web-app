@@ -1,8 +1,9 @@
 import base64
 import os
-import flask_monitoringdashboard as dashboard
 
+import flask_monitoringdashboard as dashboard
 from flask import Flask
+
 # $(base64 /dev/urandom  | head -n 1 | md5sum | awk '{print $1}')
 SECRET_KEY = str(base64.b64encode(bytes(os.urandom(24)))).encode()
 app = Flask(__name__, template_folder="../public", static_folder="../public", static_url_path='')

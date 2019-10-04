@@ -1,7 +1,7 @@
-
 from server import app
 
 from utils import utils
+
 
 @app.route('/')
 def hello_world():
@@ -19,10 +19,11 @@ def page_not_found(error):
 def requests_error(error):
     return app.send_static_file('500.html')
 
+
 @app.after_request
 def secure_headers(response):
-	"""
-	Apply securiy headers to the response call
-	:return:
-	"""
-	return utils.secure_request(response)
+    """
+    Apply securiy headers to the response call
+    :return:
+    """
+    return utils.secure_request(response)
