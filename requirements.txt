@@ -1,5 +1,6 @@
-Flask
-gunicorn
-prometheus-client
-ibmcloudenv
-livereload
+livereload==2.6.1
+Flask==1.1.1
+setuptools==41.2.0
+ibmcloudenv==0.2.1
+prometheus-client==0.7.1
+flask_monitoringdashboard

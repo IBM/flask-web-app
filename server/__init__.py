@@ -1,5 +1,6 @@
 import base64
 import os
+import flask_monitoringdashboard as dashboard
 
 from flask import Flask
 # $(base64 /dev/urandom  | head -n 1 | md5sum | awk '{print $1}')
@@ -11,6 +12,7 @@ from server.routes import *
 from server.services import *
 
 initServices(app)
+dashboard.bind(app)
 
 if 'FLASK_LIVE_RELOAD' in os.environ and os.environ['FLASK_LIVE_RELOAD'] == 'true':
     import livereload
