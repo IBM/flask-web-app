@@ -1,0 +1,23 @@
+{
+  "ibm-flask-webapp": {
+    "Version": "v0.0.1"
+  },
+  "logging": {
+    "path": "/tmp/ibm-flask-webapp-log/",
+    "prefix": "ibm-flask-webapp.log",
+    "level": "debug"
+  },
+  "network": {
+    "host": "0.0.0.0",
+    "port": 3000,
+    "templates": "public/",
+    "SSL": {
+      "enabled": false,
+      "cert.pub": "conf/ssl/localhost.crt",
+      "cert.priv": "conf/ssl/localhost.key"
+    }
+  },
+  "dashboard": {
+    "config_file": "conf/dashboard.ini"
+  }
+}

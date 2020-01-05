@@ -1,6 +1,7 @@
-
 from flask import jsonify
+
 from server import app
+
 
 @app.route("/health")
 def health():
